@@ -27,6 +27,10 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+var request = require('request');
+
+request('http://thinkcore.be/TV48/refresh.php');
+
 app.get('/', routes.index);
 app.get('/users', user.list);
 
